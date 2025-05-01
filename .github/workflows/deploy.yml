@@ -33,5 +33,4 @@ jobs:
             cd /home/ubuntu/Automate-Backend
             npm install
             npx tsc
-            pm2 delete backend-app || true
-            pm2 start dist/index.js --name backend-app
+            pm2 restart all || pm2 start dist/index.js --name backend-app
