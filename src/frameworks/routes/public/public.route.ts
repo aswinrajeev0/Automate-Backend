@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { blockStatusMiddleware, healthController, workshopController } from "../../di/resolver";
+import { blockStatusMiddleware, workshopController } from "../../di/resolver";
 import { BaseRoute } from "../base.route";
 
 export class PublicRoute extends BaseRoute {
@@ -19,10 +19,6 @@ export class PublicRoute extends BaseRoute {
 
         this.router.get("/all-workshops", blockStatusMiddleware.checkStatus("customer"), (req: Request, res: Response, next: NextFunction) => {
             workshopController.getAllWorkshopsWithRating(req, res, next)
-        })
-
-        this.router.get("/pagination-demo", (req: Request, res: Response, next: NextFunction) => {
-            healthController.paginationDemo(req, res, next);
         })
     }
 }
