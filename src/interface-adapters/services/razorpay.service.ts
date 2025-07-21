@@ -7,6 +7,8 @@ import * as crypto from "crypto";
 import { CustomError } from "../../entities/utils/custom.error";
 import { ERROR_MESSAGES, HTTP_STATUS } from "../../shared/constants";
 
+console.log(config.razorpay.KEY_ID, config.razorpay.KEY_SECRET);
+
 const razorpay = new Razorpay({
     key_id: config.razorpay.KEY_ID as string,
     key_secret: config.razorpay.KEY_SECRET as string,
