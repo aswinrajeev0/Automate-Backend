@@ -40,7 +40,7 @@ export const config = {
         UPLOAD_PRESET: process.env.UPLOAD_PRESET
     },
     razorpay: {
-        KEY_ID: process.env.RAZORPAY_KEY_ID,
-        KEY_SECRET: process.env.RAZORPAY_KEY_SECRET
+        KEY_ID: process.env.RAZORPAY_KEY_ID || "",
+        KEY_SECRET: process.env.RAZORPAY_KEY_SECRET || ""
     }
 }
